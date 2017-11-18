@@ -44,9 +44,7 @@ public interface Silencer {
 	 *         argument throwable.
 	 * @since 1.0
 	 */
-	default RuntimeException quit( Throwable throwable ) {
-		return new RuntimeException( throwable );
-	}
+	RuntimeException quit( Throwable throwable );
 
 	/**
 	 * <p>
@@ -57,8 +55,6 @@ public interface Silencer {
 	 *          A {@link java.lang.Throwable Throwable}.
 	 * @since 1.0
 	 */
-	default void log( Throwable throwable ) {
-		throwable.printStackTrace( );
-	}
+	void log( Throwable throwable );
 
 }
