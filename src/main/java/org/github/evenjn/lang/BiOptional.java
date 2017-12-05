@@ -19,8 +19,18 @@ package org.github.evenjn.lang;
 
 /**
  * <p>
- * A {@code BiOptional} object is a {@link Bi} object that may have empty slots.
- * The content of an empty slot is {@code null}.
+ * A {@code BiOptional} object is a {@link org.github.evenjn.lang.Bi Bi} object
+ * that may have empty slots. The content of an empty slot is {@code null}.
+ * </p>
+ * 
+ * <h2>Design Notes</h2>
+ * 
+ * <p>
+ * Type {@code BiOptional} is opaque, generic and non-descriptive. While it is
+ * convenient to use {@code BiOptional} to develop code quickly, we recommend
+ * that APIs never expose {@code BiOptional} or any type that extends or
+ * implements {@code BiOptional}. Instead, we recommend that APIs define their
+ * own types that provide context and explanation for the elements of the pair.
  * </p>
  * 
  * <p>

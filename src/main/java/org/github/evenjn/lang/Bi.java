@@ -26,6 +26,16 @@ package org.github.evenjn.lang;
  * satisfy any particular constraint.
  * </p>
  * 
+ * <h2>Design Notes</h2>
+ * 
+ * <p>
+ * Type {@code Bi} is opaque, generic and non-descriptive. While it is
+ * convenient to use {@code Bi} to develop code quickly, we recommend that APIs
+ * never expose {@code Bi} or any type that extends or implements {@code Bi}.
+ * Instead, we recommend that APIs define their own types that provide context
+ * and explanation for the elements of the pair.
+ * </p>
+ * 
  * <p>
  * This class is part of package {@link org.github.evenjn.lang Lang}.
  * </p>

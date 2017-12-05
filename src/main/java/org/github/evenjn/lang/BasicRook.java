@@ -25,7 +25,7 @@ import org.github.evenjn.lang.Rook;
 /**
  * <p>
  * {@code BasicRook} is a simple implementation of an
- * {@linkplain java.lang.AutoCloseable autocloseable}
+ * {@linkplain java.lang.AutoCloseable auto-closeable}
  * {@linkplain org.github.evenjn.lang.Rook Rook}.
  * </p>
  * 
