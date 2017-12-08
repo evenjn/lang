@@ -65,7 +65,7 @@ package org.github.evenjn.lang;
  * This class is part of package {@link org.github.evenjn.lang Lang}.
  * </p>
  * 
- * @param <I>
+ * @param <T>
  *          The type of objects in the sequence.
  * @since 1.0
  */
