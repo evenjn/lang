@@ -7,6 +7,7 @@
  * The pair interfaces: {@link org.github.evenjn.lang.Bi Bi}, and
  * {@link org.github.evenjn.lang.BiOptional BiOptional}.
  * </p>
+ * 
  * <p>
  * The tuple interface: {@link org.github.evenjn.lang.Tuple Tuple}>
  * </p>
