@@ -25,7 +25,7 @@
  * </p>
  * 
  * <p>
- * The checked exception silencer interface:
+ * The checked exception wrapper interface:
  * {@link org.github.evenjn.lang.Silencer Silencer}, and implementation:
  * {@link org.github.evenjn.lang.BasicSilencer BasicSilencer}
  * </p>

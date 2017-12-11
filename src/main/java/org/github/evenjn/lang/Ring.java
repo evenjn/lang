@@ -2,13 +2,31 @@ package org.github.evenjn.lang;
 
 /**
  * <p>
- * A {@code Ring} is a system that returns an object after passing the
- * responsibility to close associated resources to an argument
+ * A {@code Ring} returns an object after passing the responsibility to close
+ * resources associated to that object to an argument
  * {@link org.github.evenjn.lang.Rook Rook}.
  * </p>
  * 
+ * <h2>Disclaimer</h2>
+ * 
  * <p>
- * The {@link #get(Rook)} method can only be invoked once.
+ * An object implementing the {@code Ring} interface does not provide implicit
+ * guarantees.
+ * </p>
+ * 
+ * <p>
+ * There is no implicit guarantee that {@link #get(Rook)} never returns
+ * {@code null}.
+ * </p>
+ * 
+ * <p>
+ * There is no guarantee that the {@link #get(Rook)} method can be invoked more
+ * than once.
+ * </p>
+ * 
+ * <p>
+ * However, classes implementing Tuple or interfaces extending Tuple might
+ * provide explicit guarantees.
  * </p>
  * 
  * <p>
