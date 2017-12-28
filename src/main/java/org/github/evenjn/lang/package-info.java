@@ -1,22 +1,28 @@
 /**
+ * <h1>Lang</h1>
+ * 
  * <p>
- * Package Lang is a collection of general-purpose interfaces and classes.
+ * Lang is a collection of general-purpose interfaces and classes.
  * </p>
  * 
  * <p>
- * The pair interfaces: {@link org.github.evenjn.lang.Bi Bi}, and
+ * The public interface of Lang consists of the following interfaces and
+ * classes.
+ * </p>
+ * 
+ * <p>
+ * The pair interfaces: {@link org.github.evenjn.lang.Bi Bi} and
  * {@link org.github.evenjn.lang.BiOptional BiOptional}.
  * </p>
  * 
  * <p>
- * The tuple interface: {@link org.github.evenjn.lang.Tuple Tuple}>
+ * The tuple interface: {@link org.github.evenjn.lang.Tuple Tuple}.
  * </p>
  * 
  * <p>
- * Resource management interfaces: {@link org.github.evenjn.lang.Rook Rook} and
- * {@link org.github.evenjn.lang.Ring Ring}. An implementation of
- * {@link org.github.evenjn.lang.Rook Rook}:
- * {@link org.github.evenjn.lang.BasicRook BasicRook}
+ * The resource management interfaces: {@link org.github.evenjn.lang.Rook Rook}
+ * and {@link org.github.evenjn.lang.Ring Ring}. The class
+ * {@link org.github.evenjn.lang.BasicRook BasicRook}.
  * </p>
  * 
  * <p>
@@ -26,7 +32,7 @@
  * 
  * <p>
  * The checked exception wrapper interface:
- * {@link org.github.evenjn.lang.Silencer Silencer}, and implementation:
+ * {@link org.github.evenjn.lang.Silencer Silencer}. The class
  * {@link org.github.evenjn.lang.BasicSilencer BasicSilencer}
  * </p>
  * 

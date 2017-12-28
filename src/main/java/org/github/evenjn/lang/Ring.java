@@ -2,9 +2,9 @@ package org.github.evenjn.lang;
 
 /**
  * <p>
- * A {@code Ring} returns an object after passing the responsibility to close
- * resources associated to that object to an argument
- * {@link org.github.evenjn.lang.Rook Rook}.
+ * A {@code Ring} returns an object after giving a
+ * {@link org.github.evenjn.lang.Rook Rook} the responsibility to close all
+ * resources associated with that object .
  * </p>
  * 
  * <h2>Disclaimer</h2>
@@ -20,13 +20,12 @@ package org.github.evenjn.lang;
  * </p>
  * 
  * <p>
- * There is no guarantee that the {@link #get(Rook)} method can be invoked more
- * than once.
+ * There is no guarantee that {@link #get(Rook)} can be invoked more than once.
  * </p>
  * 
  * <p>
- * However, classes implementing Tuple or interfaces extending Tuple might
- * provide explicit guarantees.
+ * However, classes implementing Ring or interfaces extending Ring might provide
+ * explicit guarantees.
  * </p>
  * 
  * <p>
@@ -42,13 +41,14 @@ public interface Ring<T> {
 
 	/**
 	 * <p>
-	 * Returns an object after passing the responsibility to close associated
-	 * resources to the argument {@link org.github.evenjn.lang.Rook Rook}.
+	 * Returns an object after giving the argument
+	 * {@link org.github.evenjn.lang.Rook Rook} the responsibility to close all
+	 * associated resources.
 	 * </p>
 	 * 
 	 * @param rook
 	 *          A {@link org.github.evenjn.lang.Rook Rook}.
-	 * @return An output object.
+	 * @return An object.
 	 * @since 1.0
 	 */
 	T get( Rook rook );

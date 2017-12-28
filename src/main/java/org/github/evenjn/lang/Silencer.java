@@ -32,10 +32,11 @@ public interface Silencer {
 
 	/**
 	 * <p>
-	 * Reports that an exception was caught, and the computation cannot continue.
-	 * Wraps the argument exception into a {@link java.lang.RuntimeException
-	 * RuntimeException} and returns it. The invoker must throw the returned
-	 * {@link java.lang.RuntimeException RuntimeException}.
+	 * Reports that a throwable was thrown and that the computation cannot
+	 * continue. Wraps the argument throwable into a
+	 * {@link java.lang.RuntimeException RuntimeException} and returns it. The
+	 * invoker must throw the returned {@link java.lang.RuntimeException
+	 * RuntimeException}.
 	 * </p>
 	 * 
 	 * @param throwable
@@ -48,7 +49,7 @@ public interface Silencer {
 
 	/**
 	 * <p>
-	 * Reports that an exception was caught and the computation will continue.
+	 * Reports that a throwable was thrown and that the computation will continue.
 	 * </p>
 	 * 
 	 * @param throwable

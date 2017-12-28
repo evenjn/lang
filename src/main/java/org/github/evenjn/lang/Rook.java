@@ -25,7 +25,8 @@ package org.github.evenjn.lang;
  * 
  * <p>
  * Methods that take as argument a {@code Rook} typically return objects that
- * can no longer be used after the autocloseable objects are closed.
+ * can no longer be used after the autocloseable objects
+ * {@linkplain #hook(AutoCloseable) hooked} to that {@code Rook} are closed.
  * </p>
  * 
  * <p>
@@ -38,7 +39,7 @@ public interface Rook {
 
 	/**
 	 * <p>
-	 * Assigns this {@code Rook} the responsibility to close the argument object.
+	 * Gives this {@code Rook} the responsibility to close the argument object.
 	 * </p>
 	 * 
 	 * @param <T>
@@ -48,6 +49,5 @@ public interface Rook {
 	 * @return the argument {@code auto_closeable}.
 	 * @since 1.0
 	 */
-
 	<T extends java.lang.AutoCloseable> T hook( T auto_closeable );
 }
