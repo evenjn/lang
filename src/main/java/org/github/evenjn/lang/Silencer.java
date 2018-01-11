@@ -1,6 +1,6 @@
 /**
  *
- * Copyright 2017 Marco Trevisan
+ * Copyright 2018 Marco Trevisan
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -32,8 +32,8 @@ public interface Silencer {
 
 	/**
 	 * <p>
-	 * Reports that a throwable was thrown and that the computation cannot
-	 * continue. Wraps the argument throwable into a
+	 * {@code quit} reports that a throwable was thrown and that the computation
+	 * cannot continue. Wraps the argument throwable into a
 	 * {@link java.lang.RuntimeException RuntimeException} and returns it. The
 	 * invoker must throw the returned {@link java.lang.RuntimeException
 	 * RuntimeException}.
@@ -49,7 +49,8 @@ public interface Silencer {
 
 	/**
 	 * <p>
-	 * Reports that a throwable was thrown and that the computation will continue.
+	 * {@code log} reports that a throwable was thrown and that the computation
+	 * will continue.
 	 * </p>
 	 * 
 	 * @param throwable

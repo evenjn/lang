@@ -39,7 +39,8 @@ public interface Rook {
 
 	/**
 	 * <p>
-	 * Gives this {@code Rook} the responsibility to close the argument object.
+	 * {@code hook} gives this {@code Rook} the responsibility to close the
+	 * argument object.
 	 * </p>
 	 * 
 	 * @param <T>

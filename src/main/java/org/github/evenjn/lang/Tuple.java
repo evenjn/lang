@@ -1,6 +1,6 @@
 /**
  *
- * Copyright 2017 Marco Trevisan
+ * Copyright 2018 Marco Trevisan
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,6 +20,17 @@ package org.github.evenjn.lang;
 /**
  * <p>
  * A {@code Tuple} provides indexed access to a finite sequence of objects.
+ * </p>
+ * 
+ * <h2>Service Contract</h2>
+ * 
+ * <p>
+ * An object implementing the {@code Tuple} interface fulfils the following
+ * contract.
+ * </p>
+ * 
+ * <p>
+ * The {@link #size()} method never returns a negative number.
  * </p>
  * 
  * <h2>Disclaimer</h2>
@@ -77,9 +88,13 @@ public interface Tuple<T> {
 	 * @param index
 	 *          The position of the object to retrieve.
 	 * @return The object at position {@code index} in the sequence.
+	 * @throws IllegalArgumentException
+	 *           when {@code index} is negative, when {@code index} is not smaller
+	 *           than the size of this sequence.
 	 * @since 1.0
 	 */
-	T get( int index );
+	T get( int index )
+			throws IllegalArgumentException;
 
 	/**
 	 * Returns the size of the sequence.

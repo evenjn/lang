@@ -21,9 +21,10 @@ import java.util.LinkedList;
 
 /**
  * <p>
- * {@code BasicRook} is a simple implementation of an
+ * {@code ClearableRook} is an implementation of an
  * {@linkplain java.lang.AutoCloseable auto-closeable}
- * {@linkplain org.github.evenjn.lang.Rook Rook}.
+ * {@linkplain org.github.evenjn.lang.Rook Rook} that allows to close collected
+ * resources at any time.
  * </p>
  * 
  * <p>
@@ -32,7 +33,7 @@ import java.util.LinkedList;
  * 
  * @since 1.0
  */
-public final class BasicRook implements
+public final class ClearableRook implements
 		Rook,
 		AutoCloseable {
 
@@ -40,6 +41,18 @@ public final class BasicRook implements
 
 	private LinkedList<AutoCloseable> objects_to_close;
 
+	/**
+	 * <p>
+	 * {@code close} closes all resources still present in this {@code Rook},
+	 * removes them from this {@code Rook} and closes this {@code ClearableRook}.
+	 * </p>
+	 * 
+	 * @throws RuntimeException
+	 *           When one or more invocations of
+	 *           {@link java.lang.AutoCloseable#close() close()} on the collected
+	 *           resources throw exception.
+	 * @since 1.0
+	 */
 	@Override
 	public void close( ) {
 		if ( closed ) {
@@ -54,7 +67,22 @@ public final class BasicRook implements
 		}
 	}
 
-	private void clear( ) {
+	/**
+	 * <p>
+	 * {@code clear} closes all resources still present in this {@code Rook} and
+	 * removes them from this {@code Rook}.
+	 * </p>
+	 * 
+	 * @throws IllegalStateException
+	 *           When this {@code ClearableRook} is closed.
+	 * @throws RuntimeException
+	 *           When one or more invocations of
+	 *           {@link java.lang.AutoCloseable#close() close()} on the collected
+	 *           resources throw exception.
+	 * @since 1.0
+	 */
+	public void clear( ) {
+		checkNotClosed( );
 		if ( objects_to_close == null ) {
 			return;
 		}
@@ -84,6 +112,22 @@ public final class BasicRook implements
 		}
 	}
 
+	/**
+	 * <p>
+	 * {@code hook} gives this {@code ClearableRook} the responsibility to close
+	 * the argument object.
+	 * </p>
+	 * 
+	 * @param <T>
+	 *          the type of the object that needs to be closed.
+	 * @param auto_closeable
+	 *          the object that needs to be closed
+	 * @return the argument {@code auto_closeable}.
+	 * 
+	 * @throws IllegalStateException
+	 *           When this {@code ClearableRook} is closed.
+	 * @since 1.0
+	 */
 	@Override
 	public <T extends AutoCloseable> T hook( T auto_closeable ) {
 		checkNotClosed( );
