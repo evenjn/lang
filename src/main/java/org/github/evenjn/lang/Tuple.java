@@ -83,7 +83,9 @@ package org.github.evenjn.lang;
 public interface Tuple<T> {
 
 	/**
-	 * Returns the object at position {@code index} in the sequence.
+	 * <p>
+	 * {@code get} returns the object at position {@code index} in the sequence.
+	 * </p>
 	 * 
 	 * @param index
 	 *          The position of the object to retrieve.
@@ -97,7 +99,9 @@ public interface Tuple<T> {
 			throws IllegalArgumentException;
 
 	/**
-	 * Returns the size of the sequence.
+	 * <p>
+	 * {@code size} returns the size of the sequence.
+	 * </p>
 	 * 
 	 * @return The size of the sequence.
 	 * @since 1.0

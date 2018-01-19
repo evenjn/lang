@@ -11,17 +11,12 @@
  * </p>
  * 
  * <p>
- * The pair interfaces: {@link org.github.evenjn.lang.Bi Bi} and
- * {@link org.github.evenjn.lang.BiOptional BiOptional}.
- * </p>
- * 
- * <p>
  * The tuple interface: {@link org.github.evenjn.lang.Tuple Tuple}.
  * </p>
  * 
  * <p>
  * The resource management interfaces: {@link org.github.evenjn.lang.Rook Rook}
- * and {@link org.github.evenjn.lang.Ring Ring}. The class
+ * and {@link org.github.evenjn.lang.Ring Ring}. A class implementing it:
  * {@link org.github.evenjn.lang.BasicRook BasicRook}.
  * </p>
  * 
@@ -32,8 +27,8 @@
  * 
  * <p>
  * The checked exception wrapper interface:
- * {@link org.github.evenjn.lang.Silencer Silencer}. The class
- * {@link org.github.evenjn.lang.BasicSilencer BasicSilencer}
+ * {@link org.github.evenjn.lang.Silencer Silencer}. A class implementing it:
+ * {@link org.github.evenjn.lang.BasicSilencer BasicSilencer}.
  * </p>
  * 
  * @since 1.0

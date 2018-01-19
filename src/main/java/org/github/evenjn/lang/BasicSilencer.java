@@ -15,11 +15,35 @@ package org.github.evenjn.lang;
 public class BasicSilencer implements
 		Silencer {
 
+	/**
+	 * <p>
+	 * {@code quit} wraps the argument throwable into a
+	 * {@link java.lang.RuntimeException RuntimeException} and returns it. The
+	 * invoker must throw the returned {@link java.lang.RuntimeException
+	 * RuntimeException}.
+	 * </p>
+	 * 
+	 * @param throwable
+	 *          A {@link java.lang.Throwable Throwable}.
+	 * @return A {@link java.lang.RuntimeException RuntimeException} wrapping the
+	 *         argument throwable.
+	 * @since 1.0
+	 */
 	@Override
 	public RuntimeException quit( Throwable throwable ) {
 		return new RuntimeException( throwable );
 	}
 
+	/**
+	 * <p>
+	 * {@code log} prints this throwable and its backtrace to the standard error
+	 * stream.
+	 * </p>
+	 * 
+	 * @param throwable
+	 *          A {@link java.lang.Throwable Throwable}.
+	 * @since 1.0
+	 */
 	@Override
 	public void log( Throwable throwable ) {
 		throwable.printStackTrace( );

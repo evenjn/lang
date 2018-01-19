@@ -37,7 +37,10 @@ package org.github.evenjn.lang;
 public interface Equivalencer<X, Y> {
 
 	/**
-	 * Compares two objects and tells whether they are equivalent or not.
+	 * <p>
+	 * {@code equivalent} compares two objects and tells whether they are
+	 * equivalent or not.
+	 * </p>
 	 * 
 	 * @param x
 	 *          The first object of the comparison.
@@ -50,9 +53,14 @@ public interface Equivalencer<X, Y> {
 	boolean equivalent( X x, Y y );
 
 	/**
+	 * <p>
+	 * {@code swap} returns an {@code Equivalencer} that carries out the same
+	 * computation as {@code this}, but takes its arguments in swapped order.
+	 * </p>
 	 * 
 	 * @return An {@code Equivalencer} that carries out the same computation as
 	 *         {@code this}, but takes its arguments in swapped order.
+	 * @since 1.0
 	 */
 	default Equivalencer<Y, X> swap( ) {
 		Equivalencer<X, Y> e = this;

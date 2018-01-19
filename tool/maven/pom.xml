@@ -118,6 +118,10 @@
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-javadoc-plugin</artifactId>
             <version>2.10.4</version>
+            <configuration>
+              <bottom>Copyright &#169; 2016&#x2013;{currentYear} Marco Trevisan.
+                Distributed under the Apache License, Version 2.0.</bottom>
+            </configuration>
             <executions>
               <execution>
                 <id>attach-javadocs</id>
