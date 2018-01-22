@@ -11,10 +11,6 @@
  * </p>
  * 
  * <p>
- * The tuple interface: {@link org.github.evenjn.lang.Tuple Tuple}.
- * </p>
- * 
- * <p>
  * The resource management interfaces: {@link org.github.evenjn.lang.Rook Rook}
  * and {@link org.github.evenjn.lang.Ring Ring}. A class implementing it:
  * {@link org.github.evenjn.lang.BasicRook BasicRook}.
