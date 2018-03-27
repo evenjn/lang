@@ -134,7 +134,8 @@ public final class BasicRook implements
 	/**
 	 * <p>
 	 * {@code hook} gives this {@code BasicRook} the responsibility to close the
-	 * argument object.
+	 * argument object, then returns it. When the argument object is {@code null},
+	 * this method does nothing and returns {@code null}.
 	 * </p>
 	 * 
 	 * @param <T>
@@ -150,10 +151,12 @@ public final class BasicRook implements
 	@Override
 	public <T extends AutoCloseable> T hook( T auto_closeable ) {
 		checkNotClosed( );
-		if ( objects_to_close == null ) {
-			objects_to_close = new LinkedList<AutoCloseable>( );
+		if ( auto_closeable != null ) {
+			if ( objects_to_close == null ) {
+				objects_to_close = new LinkedList<AutoCloseable>( );
+			}
+			objects_to_close.addFirst( auto_closeable );
 		}
-		objects_to_close.addFirst( auto_closeable );
 		return auto_closeable;
 	}
 
